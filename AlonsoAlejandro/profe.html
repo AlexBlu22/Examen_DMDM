@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de cambio de moneda</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid !direction !spacing">
+      <h1>Monedas</h1>
+      <form class="row g-3" >
+        <div class="col-md-3">
+          <label for="id_selectMoneda" class="form-label">Moneda</label>
+          <select class="form-select" id="id_selectMoneda" required>
+            <option selected disabled value="">Elige una moneda</option>
+            <!-- Parte de seleccion de campos -->
+            <option value="1">Elige una moneda1</option>
+            <option value="2">Elige una moneda2</option>
+          </select>
+          <div class="invalid-feedback" id="id_seleccion_moneda">Por favor selecciona una moneda</div>
+        </div>
+      </form>
+
+    <div  class="mt-5">
+        <table id="id_tabla" class="table">
+            <thead>
+              <tr>
+                <th class="col-2">Moneda</th>
+                <th class="col-10">Cambio</th>
+              </tr>
+            </thead>
+            <!-- Parte de muesta de valos de cada moneda -->
+            <tbody id="id_cuerpo_tabla">
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+    <script src="js_per/index.js"></script>
+  </body>
+</html>

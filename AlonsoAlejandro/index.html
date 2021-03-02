@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS|JS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Personal CSS|JS -->
+    <link rel="stylesheet" type="text/css" href="css_per/index.css" />
+    <script src="js_per/index.js"></script>
+
+    <!-- Titulo de la pagina -->
+    <title>Gestión de cambio de moneda</title>
+    <link rel="icon" type="image/png" href="imagen/cash-stack.svg" />
+  </head>
+
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+      <!---------- Parte superior ---------->
+      <header class="mb-auto">
+
+        <!-- Enlaces -->
+        <div>
+          <nav class="nav nav-masthead justify-content-center">
+            <!-- Bootstrap -->
+            <a href="https://getbootstrap.com/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bootstrap nav-link text-secondary" viewBox="0 0 16 16">
+                <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/>
+                <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+      </header>
+    
+      <!---------- Parte principal ---------->
+      <main class="px-3">
+
+        <!-- Titulo -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
+          <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+          <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"/>
+        </svg>
+
+        <!-- Formulario -->
+        <form class="row g-3">
+          <!-- Seleccion del tipo de moneda -->
+          <div class="col-md text-start">
+            <select class="form-select" aria-label="Default select example" id="id_desplegable_monedas">
+              <option selected>Elige una moneda</option>
+            </select>
+          </div>
+          <!-- Boton cambio -->
+          <div class="col-md">
+            <button id="id_cambio" type="button" class="w-100 btn btn-secondary text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Cambio
+            </button>
+          </div>
+          <div>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Cambio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-dark text-start">
+                    <!-- Lo que esta aqui esta referenciado en el .js -->
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Moneda</th>
+                          <th>Cambio</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cuerpo_tabla">
+                        <tr>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </form>
+
+      </main>
+    
+      <!---------- Parte inferior ---------->
+      <footer class="mt-auto text-white-50"></footer>
+      </footer>
+
+    </div>
+  </body>
+</html>
